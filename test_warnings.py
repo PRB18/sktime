@@ -60,6 +60,8 @@ window_summarizer.fit_transform(X_exo, y)
 # 4) FutureWarning: ChainedAssignment in make_reduction with pooling="global"
 #    Inplace method on a DataFrame copy during predict().
 #    Source: sktime/forecasting/compose/_reduce.py:453
+#
+#    Expected behavior: Will raise ChainedAssignmentError in pandas 3.0
 # =============================================================================
 forecaster = make_reduction(
     LinearRegression(),

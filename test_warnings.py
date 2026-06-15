@@ -36,6 +36,8 @@ DateTimeFeatures().fit_transform(X_daily)
 # 2) FutureWarning: ChainedAssignment in DateTimeFeatures with manual_selection
 #    cd[funcs] = np.int64(cd[funcs]) assigns on a copy.
 #    Source: sktime/transformations/series/date.py:406
+#
+#    Expected behavior: Will raise ChainedAssignmentError in pandas 3.0
 # =============================================================================
 DateTimeFeatures(manual_selection=["day_of_week", "month_of_year"]).fit_transform(X_daily)
 

@@ -45,6 +45,8 @@ DateTimeFeatures(manual_selection=["day_of_week", "month_of_year"]).fit_transfor
 # 3) FutureWarning: ChainedAssignment in WindowSummarizer
 #    func_dict["window"] = ... assigns on a copy during fit_transform.
 #    Source: sktime/transformations/series/summarize.py:308
+#
+#    Expected behavior: Will raise ChainedAssignmentError in pandas 3.0
 # =============================================================================
 X_exo = pd.DataFrame({"exo": np.random.poisson(lam=5, size=len(y))}, index=y.index)
 

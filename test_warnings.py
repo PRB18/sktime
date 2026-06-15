@@ -1,3 +1,9 @@
+"""
+Demonstration script for pandas Copy-on-Write (CoW) FutureWarnings in sktime.
+
+This script showcases 5 different pandas CoW warning scenarios that will become
+errors in pandas 3.0 when Copy-on-Write becomes the default behavior.
+"""
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression

@@ -25,6 +25,8 @@ fh = np.arange(1, 36)
 #    sktime uses df["col"][idx] = value which pandas 3.0 CoW will break.
 #    Also uses .replace() on categorical Series (deprecated).
 #    Source: sktime/transformations/series/date.py:438,439,445,451,455,457,462
+# 
+#    Expected behavior: Will raise ChainedAssignmentError in pandas 3.0
 # =============================================================================
 X_daily = pd.DataFrame({"exo": range(90)}, index=pd.date_range("2024-01-01", periods=90))
 
